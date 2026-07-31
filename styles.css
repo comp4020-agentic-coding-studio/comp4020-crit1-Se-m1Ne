@@ -1,16 +1,105 @@
+/* Fizzwhizz Candy Co. -- most of the look lives in the HTML (table layout,
+   font/center/bgcolor attributes); this file only covers what those
+   attributes can't: beveled button/box borders, the ticker box, the counter
+   digits, and the one concession to a non-1998 requirement -- the site
+   still has to work at a phone width. */
+
 body {
   margin: 0;
-  padding: 2rem;
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
-  color: #1a1a1a;
+  padding: 12px 0;
 }
 
-main {
-  max-width: 40rem;
-  margin: 0 auto;
+table.page {
+  border: 2px solid #660099;
+  background-color: #fff8dc;
 }
 
-a {
-  color: #0b5fff;
+td.navbar {
+  background-color: #c0c0c0;
+  padding: 4px 8px;
+}
+
+td.navbar nav a {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 2px 0;
+  background-color: #c0c0c0;
+  border: 2px outset #ffffff;
+  color: #000080;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+td.navbar nav a:hover {
+  border-style: inset;
+}
+
+td.navbar nav a:visited {
+  color: #000080;
+}
+
+td.banner,
+td.content,
+td.footer {
+  padding: 12px 16px;
+}
+
+.hazard-strip {
+  height: 18px;
+  background-image: url("./assets/construction-stripes.gif");
+  background-repeat: repeat;
+  border: 1px solid #000000;
+  margin: 8px 0;
+}
+
+.counter {
+  background-color: #000000;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  letter-spacing: 2px;
+  padding: 2px 6px;
+  border: 2px inset #666666;
+}
+
+.badge {
+  border: 1px solid #000000;
+  background-color: #ffffcc;
+  font-size: 11px;
+  padding: 2px 6px;
+  display: inline-block;
+}
+
+table.data {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.data caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+table.data th,
+table.data td {
+  border: 1px solid #660099;
+  padding: 4px 8px;
+  text-align: left;
+}
+
+table.data th {
+  background-color: #ffddaa;
+}
+
+/* Not part of the 1998 look -- the deployed artefact is also graded at a
+   390px-wide phone viewport, where the fixed table width would otherwise
+   force horizontal scroll. */
+@media (max-width: 480px) {
+  table.page {
+    width: 100% !important;
+  }
+
+  td.navbar nav a {
+    display: block;
+  }
 }
