@@ -1,9 +1,5 @@
 # Process overview
 
-<!-- TEMPLATE: this file is a shape to fill in, not a form. Replace everything
-     in it with your own overview, and delete this comment — `pnpm
-     check:evidence` will remind you if it's still here. -->
-
 A reading-guide to how the work came together --- a map to your process, not an
 essay about it. Markers read this file and follow its citations; they don't
 trawl the repo for evidence you didn't point at, so if a moment mattered, cite
@@ -15,60 +11,27 @@ is the requirement, and each brief adds its own word count and moment count.
 
 ## What I built
 
-One paragraph: the thing, and the idea behind it.
+I built a multi-page static website inspired by forgotten web aesthetics from the late 1990s and early 2000s. The site takes inspiration from GeoCities personal homepages and Windows 95/98 interfaces, using bright colours, dense layouts, decorative GIFs, floating windows, badges, counters, and other outdated web conventions. Instead of following modern minimal web design, the goal was to create a site that feels like an old personal webpage that has been continuously modified over time.
 
 ## The moments that mattered
 
-Three or four for an assignment; fewer is fine for a weekly prototype. Keep the
-list short so each moment has room to do all four jobs:
+The initial version captured the idea of a retro website, but it still looked too similar to a modern structured webpage. I directed the agent to rebuild the homepage around a genuine 1998-style candy-company website aesthetic, focusing on stronger period-specific visual choices rather than simply changing colours. I knew this was the right direction because the result established a clear old-web identity that could be expanded through later iterations.
 
-1. **what happened** --- the problem, or the thing the agent got wrong
-2. **what you did instead of the obvious thing** --- the call you made, and why
-   it beat the obvious one
-3. **how you knew it was right** --- the check you ran, the viewport you looked
-   at, what you read before accepting the diff
-4. **the citation** --- a commit or commit range, a `CLAUDE.md` change, a check
-   that went from red to green, a prompt paired with the commit it produced
+Citation:
+[`ce4389d`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/ce4389d)
 
-Jobs 2 and 3 are the ones the repo can't tell a reader on its own, so they're
-where the marks are. The strongest moments are the ones where a correction
-landed in the **harness** rather than in another prompt --- a rule added to
-`CLAUDE.md`, a check wired up, an attempt thrown away: re-prompting until it
-passes is the routine case, and changing what the agent works against is the
-skilled one.
+The next challenge was that the site still felt too clean and intentionally designed. Instead of adding more conventional content, I asked the agent to introduce the visual clutter associated with older personal websites, including sidebars, banners, navigation buttons, decorative icons, and intentionally excessive elements. I accepted this change after checking the rendered pages and confirming that the layout felt more like an accumulated personal homepage rather than a modern design system.
 
-Cite each moment as a link whose text is the commit hash or range and whose
-target is this repo's commit or compare URL, so a reader clicks straight to the
-evidence:
+Citation:
+[`435ba04`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/435ba04)
+[`6dd217f`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/6dd217f)
+[`1d465f4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/1d465f4)
 
-- one commit: [`a1b2c3d`](https://github.com/YOUR-ORG/YOUR-REPO/commit/a1b2c3d)
-- a range:
-  [`a1b2c3d...e4f5a6b`](https://github.com/YOUR-ORG/YOUR-REPO/compare/a1b2c3d...e4f5a6b)
+The final visual refinement focused on making the website feel even closer to the forgotten web era. The agent initially provided some decorative elements, but I pushed further by requesting overlapping Win95/98-style floating windows and additional widgets containing unnecessary animations and effects. This was a deliberate choice because these elements represented the personality of old websites rather than improving usability. I verified the result by reviewing all pages in the browser and ensuring that the site still followed the static HTML/CSS constraint.
 
-To pair a prompt with the commit it produced, quote the prompt (curated, not a
-full transcript) next to the citation:
-
-> the prompt, verbatim
-
-Screenshots are welcome where one carries the verification better than a
-sentence does. Commit the file to this repo and link it with a **relative**
-path, which is what makes it render on GitHub: `![alt text](docs/before.png)`.
-Images don't count towards the word count and don't replace the citation.
-
-### A worked moment, for shape
-
-Delete this section along with the rest of the boilerplate --- it's here to show
-the four jobs in one paragraph, not to be imitated in content.
-
-> The date formatter kept coming back with `toLocaleDateString()` and no locale
-> argument, so the same build rendered differently on my machine and in CI. I'd
-> already re-prompted it twice, which fixed the line but not the habit, so the
-> third time I put the rule in `CLAUDE.md` instead
-> ([`3f9ac21`](https://github.com/YOUR-ORG/YOUR-REPO/commit/3f9ac21)) and added
-> a spec test that fails on a bare `toLocaleDateString`. That's what told me it
-> had actually taken: the test went red against the old code and green against
-> the new, and the next two features it wrote passed it without prompting
-> ([`3f9ac21...b7e0d14`](https://github.com/YOUR-ORG/YOUR-REPO/compare/3f9ac21...b7e0d14)).
+Citation:
+[`be06f96`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/be06f96)
+[`40597b2`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/40597b2)
 
 ## Before you ship
 
