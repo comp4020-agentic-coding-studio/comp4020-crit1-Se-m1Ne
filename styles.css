@@ -279,6 +279,47 @@ table.data th {
   left: 720px;
 }
 
+.winbody-left {
+  text-align: left;
+}
+
+/* Not period technique -- real pages of the era blinked via Netscape's
+   native <blink> tag and "loading" via an animated GIF; Chrome dropped
+   <blink> entirely and hand-rolling an animated GIF89a byte-for-byte isn't
+   worth it here, so a hard-cut CSS animation (step timing, no easing) fakes
+   the same on/off flicker and frame-by-frame sprite flip instead. */
+.blink-text {
+  animation: blinker 1s step-start infinite;
+  font-weight: bold;
+  color: #f00;
+}
+
+@keyframes blinker {
+  50% {
+    visibility: hidden;
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  background-image: url("./assets/spinner-strip.gif");
+  background-repeat: no-repeat;
+  animation: spin-frames 0.8s steps(8) infinite;
+}
+
+@keyframes spin-frames {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -96px 0;
+  }
+}
+
 /* Not part of the 1998 look -- the deployed artefact is also graded at a
    390px-wide phone viewport, where the fixed table width and the sidebar
    column would otherwise force horizontal scroll. The floating windows are
