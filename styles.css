@@ -199,10 +199,100 @@ table.data th {
   background-color: #fda;
 }
 
+/* Floating desktop-window widgets (hit counters, awards, webring badge,
+   update note, construction notice) -- the DHTML-era trick of faking a
+   little OS window with a title-bar table, scattered around the page and
+   overlapping its edges slightly. .page-wrap gives them something to be
+   positioned against without touching table.page itself. */
+.page-wrap {
+  position: relative;
+  width: 760px;
+  margin: 0 auto;
+}
+
+.floatwin {
+  position: absolute;
+  z-index: 5;
+  width: 150px;
+  border: 2px outset #ccc;
+  background-color: #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.floatwin td.wintitle,
+.floatwin td.winbtns {
+  background-color: #006;
+  color: #fff;
+  font-weight: bold;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+.floatwin td.winbtns {
+  text-align: right;
+}
+
+.floatwin .winbtn {
+  border: 1px outset #fff;
+  background-color: #ccc;
+  color: #000;
+  padding: 0 2px;
+  font-size: 9px;
+}
+
+.floatwin td.winbody {
+  background-color: #fff;
+  border: 1px inset #666;
+  margin: 3px;
+  padding: 5px;
+  text-align: center;
+}
+
+.win-tl {
+  top: 70px;
+  left: -110px;
+}
+
+.win-tr {
+  top: 100px;
+  left: 720px;
+}
+
+.win-ml {
+  top: 300px;
+  left: -110px;
+}
+
+.win-mr {
+  top: 340px;
+  left: 720px;
+}
+
+.win-bl {
+  top: 560px;
+  left: -110px;
+}
+
+.win-br {
+  top: 600px;
+  left: 720px;
+}
+
 /* Not part of the 1998 look -- the deployed artefact is also graded at a
    390px-wide phone viewport, where the fixed table width and the sidebar
-   column would otherwise force horizontal scroll. */
+   column would otherwise force horizontal scroll. The floating windows are
+   pixel-positioned against the 760px desktop canvas and have nowhere sane
+   to go at that width, so they're dropped rather than squeezed in. */
 @media (width <= 480px) {
+  .page-wrap {
+    width: 100% !important;
+  }
+
+  .floatwin {
+    display: none;
+  }
+
   table.page {
     width: 100% !important;
   }
