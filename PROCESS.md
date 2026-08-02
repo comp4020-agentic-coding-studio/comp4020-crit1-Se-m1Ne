@@ -18,20 +18,20 @@ I built a multi-page static website inspired by forgotten web aesthetics from th
 The initial version captured the idea of a retro website, but it still looked too similar to a modern structured webpage. I directed the agent to rebuild the homepage around a genuine 1998-style candy-company website aesthetic, focusing on stronger period-specific visual choices rather than simply changing colours. I knew this was the right direction because the result established a clear old-web identity that could be expanded through later iterations.
 
 Citation:
-[`ce4389d`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/ce4389d)
+[`ce4389d`](https://github.com/comp4020-agentic-coding-studio/comp4020-crit1-Se-m1Ne/commit/ce4389d)
 
 The next challenge was that the site still felt too clean and intentionally designed. Instead of adding more conventional content, I asked the agent to introduce the visual clutter associated with older personal websites, including sidebars, banners, navigation buttons, decorative icons, and intentionally excessive elements. I accepted this change after checking the rendered pages and confirming that the layout felt more like an accumulated personal homepage rather than a modern design system.
 
 Citation:
-[`435ba04`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/435ba04)
-[`6dd217f`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/6dd217f)
-[`1d465f4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/1d465f4)
+[`435ba04`](https://github.com/comp4020-agentic-coding-studio/comp4020-crit1-Se-m1Ne/commit/435ba04)
+[`6dd217f`](https://github.com/comp4020-agentic-coding-studio/comp4020-crit1-Se-m1Ne/commit/6dd217f)
+[`1d465f4`](https://github.com/comp4020-agentic-coding-studio/comp4020-crit1-Se-m1Ne/commit/1d465f4)
 
 The final visual refinement focused on making the website feel even closer to the forgotten web era. The agent initially provided some decorative elements, but I pushed further by requesting overlapping Win95/98-style floating windows and additional widgets containing unnecessary animations and effects. This was a deliberate choice because these elements represented the personality of old websites rather than improving usability. I verified the result by reviewing all pages in the browser and ensuring that the site still followed the static HTML/CSS constraint.
 
 Citation:
-[`be06f96`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/be06f96)
-[`40597b2`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Se-m1Ne/commit/40597b2)
+[`be06f96`](https://github.com/comp4020-agentic-coding-studio/comp4020-crit1-Se-m1Ne/commit/be06f96)
+[`40597b2`](https://github.com/comp4020-agentic-coding-studio/comp4020-crit1-Se-m1Ne/commit/40597b2)
 
 ## Before you ship
 
